@@ -10,6 +10,7 @@ Needs Python 3 with `fonttools` and `Pillow`, and `rsvg-convert` (librsvg) for P
 cd process/generator
 python3 export.py     # emblem/, wordmark/, horizontal/, stacked/, favicon/, app-icon/
 python3 overview.py   # overview.html in the repo root
+python3 github.py     # github/: org avatar and README headers
 ```
 
 | File           | Does                                                                                          |
@@ -17,6 +18,7 @@ python3 overview.py   # overview.html in the repo root
 | `final.py`     | The locked logo as polygons: emblem `grid` (E2), Inter Display SemiBold Italic, track −22, cuts `ladder_c2(45)`, i-dot S6 at 1.22×. Glyph outlines are flattened and the cuts subtracted (`subtract`), so exports carry no masks. |
 | `export.py`    | Writes every logo file in steel, iron, black and white (SVG + PNG 1x–4x), the favicons (small-size cut, gap 11, up to 48 px) and the app icons. |
 | `round5.py`    | Round 5's two-tone board. Uses `final.wordmark_parts()`, which returns the letters and the i-dot separately. |
+| `github.py`    | `github/`: the P1 avatar (emblem with a widened cleft, sampled into contribution cells) and the H3 README headers, dark and light. Seeded, so reruns are identical. |
 | `overview.py`  | `overview.html`, built from the exported files.                                              |
 
 ## Shared pieces

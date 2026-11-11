@@ -93,6 +93,8 @@ In a headline, one word can carry the steel shimmer (steel → white → steel, 
 | Website header and footer  | `horizontal/svg/hematite-horizontal-color-dark.svg`              |
 | App sidebar                | `emblem/svg/hematite-emblem-steel.svg` (32 px: use the favicon cut) |
 | Open Graph / link preview  | Not made yet; steel lockup on night, see DESIGN-LANGUAGE.md      |
+| GitHub org avatar          | `github/hematite-github-avatar-1024.png` (the emblem in contribution squares, GitHub green) |
+| GitHub org README header   | `github/hematite-github-header-dark.svg` and `-light.svg`, switched with `<picture>` |
 | Discord server icon        | `app-icon/hematite-app-icon-night-1024.png`                      |
 | Profile pictures           | `app-icon/hematite-app-icon-night-1024.png` on dark platforms, `…-steel-1024.png` on light ones |
 | Documents, email           | `horizontal/svg/hematite-horizontal-color.svg`                   |
@@ -108,6 +110,7 @@ In a headline, one word can carry the steel shimmer (steel → white → steel, 
 - Don't rotate, skew or stretch the logo.
 - Don't type ".gg" next to the wordmark; a domain lockup will be drawn.
 - Don't scale `emblem/` below 48 px; use the favicon's small-size cut.
+- Don't use GitHub's green outside `github/`. On GitHub the contribution grid is the motif; everywhere else the brand stays steel.
 
 ## Files and sources
 

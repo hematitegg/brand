@@ -28,8 +28,9 @@ Read this before you make, pick or change anything with the hematite logo or des
 5. **Cuts are fixed.** Don't add, remove or deepen cuts on the letters; they are part of the drawing (C2 light).
 6. **Small sizes use the small-size cut.** At 48 px and below, use the favicon emblem (wider cleft), not a scaled-down `emblem/` file.
 7. **No added effects:** no drop shadows, glows, outlines, gradients, rotation or recolouring of the logo. The website's steel glows go behind things, never on the logo.
-8. **No ".gg" yet.** Don't build a domain lockup by typing ".gg" next to the wordmark; it will be drawn later.
-9. **Type is Inter.** The UI and all text use Inter; Inter Display exists only inside the drawn wordmark.
+8. **GitHub green stays on GitHub.** The contribution-grid avatar and header in `github/` use GitHub's own greens; green appears nowhere else in the brand.
+9. **No ".gg" yet.** Don't build a domain lockup by typing ".gg" next to the wordmark; it will be drawn later.
+10. **Type is Inter.** The UI and all text use Inter; Inter Display exists only inside the drawn wordmark.
 
 ## Picking a file
 
@@ -45,6 +46,8 @@ Read this before you make, pick or change anything with the hematite logo or des
 | Avatars, small marks                     | `emblem/svg/hematite-emblem-<colourway>.svg`           |
 | Favicon                                  | `favicon/`                                             |
 | App or tool icon                         | `app-icon/hematite-app-icon-night-1024.png`            |
+| GitHub org avatar                        | `github/hematite-github-avatar-1024.png`               |
+| GitHub org README header                 | `github/hematite-github-header-dark.svg` / `-light.svg` |
 | Colours, radii, easing in code           | `brand/tokens.css`                                     |
 
 ## Making or changing files
