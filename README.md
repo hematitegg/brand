@@ -43,6 +43,7 @@ In the two-tone colourways the i-dot always takes the emblem's colour, never the
 | `emblem/`       | Emblem only, 4 colourways, SVG + PNG 1x–4x (1x = 512 px)                                      |
 | `favicon/`      | `favicon.svg`, `favicon.ico` (16/32/48), PNGs 16–128, apple-touch 180, android-chrome 192/512 |
 | `app-icon/`     | 1024 px: steel emblem on night, iron emblem on steel, square and rounded                       |
+| `social/`       | X header 1500×500 (centre, right, logo; PNG 1x and 2x + SVG) and round avatars (night, iron, steel; 400 and 1000 px + SVG) |
 | `github/`       | GitHub org avatar (the emblem as contribution squares, 1024 + 460 px) and the org README header (1280×400, dark and light, SVG + PNG @2x) |
 | `brand/`        | Guide, design language, tokens, stylesheet page                                               |
 | `process/`      | How the logo came about (rounds 1–4) and the generator that makes every file                  |

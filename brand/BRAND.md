@@ -93,10 +93,11 @@ In a headline, one word can carry the steel shimmer (steel → white → steel, 
 | Website header and footer  | `horizontal/svg/hematite-horizontal-color-dark.svg`              |
 | App sidebar                | `emblem/svg/hematite-emblem-steel.svg` (32 px: use the favicon cut) |
 | Open Graph / link preview  | Not made yet; steel lockup on night, see DESIGN-LANGUAGE.md      |
+| X header                   | `social/hematite-x-header-right-1500x500.png` (logo weighted right, clear of the avatar) |
 | GitHub org avatar          | `github/hematite-github-avatar-1024.png` (the emblem in contribution squares, GitHub green) |
 | GitHub org README header   | `github/hematite-github-header-dark.svg` and `-light.svg`, switched with `<picture>` |
 | Discord server icon        | `app-icon/hematite-app-icon-night-1024.png`                      |
-| Profile pictures           | `app-icon/hematite-app-icon-night-1024.png` on dark platforms, `…-steel-1024.png` on light ones |
+| Profile pictures           | `social/hematite-avatar-night-400.png` (round crop, matches the X header); `social/hematite-avatar-steel-400.png` where a light avatar is needed |
 | Documents, email           | `horizontal/svg/hematite-horizontal-color.svg`                   |
 | Print, merch               | Black or white SVG, one colour                                   |
 

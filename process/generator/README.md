@@ -11,6 +11,7 @@ cd process/generator
 python3 export.py     # emblem/, wordmark/, horizontal/, stacked/, favicon/, app-icon/
 python3 overview.py   # overview.html in the repo root
 python3 github.py     # github/: org avatar and README headers
+python3 social.py     # social/: X headers and social avatars
 ```
 
 | File           | Does                                                                                          |
@@ -18,6 +19,7 @@ python3 github.py     # github/: org avatar and README headers
 | `final.py`     | The locked logo as polygons: emblem `grid` (E2), Inter Display SemiBold Italic, track −22, cuts `ladder_c2(45)`, i-dot S6 at 1.22×. Glyph outlines are flattened and the cuts subtracted (`subtract`), so exports carry no masks. |
 | `export.py`    | Writes every logo file in steel, iron, black and white (SVG + PNG 1x–4x), the favicons (small-size cut, gap 11, up to 48 px) and the app icons. |
 | `round5.py`    | Round 5's two-tone board. Uses `final.wordmark_parts()`, which returns the letters and the i-dot separately. |
+| `social.py`    | `social/`: X headers and round social avatars in the website's language (night, steel glow, the fading 64 px grid, two-tone logo). The tagline is set in Inter and outlined, so the SVGs need no fonts. |
 | `github.py`    | `github/`: the P1 avatar (emblem with a widened cleft, sampled into contribution cells) and the H3 README headers, dark and light. Seeded, so reruns are identical. |
 | `overview.py`  | `overview.html`, built from the exported files.                                              |
 
@@ -45,4 +47,4 @@ Each writes `svg/` and `board.html` into its folder. In rounds 1–4 the cuts ar
 
 ## Fonts
 
-`fonts/` holds the typefaces the boards and the logo are drawn from, all under the SIL Open Font License 1.1 (`fonts/OFL.txt`): Inter Display (the wordmark's base), DM Serif Text, Geist and Geist Mono (round 1 only). Geist, Geist Mono and DM Serif Text came from the website's build cache; the Geist files are static instances of the variable fonts.
+`fonts/` holds the typefaces the boards and the logo are drawn from, all under the SIL Open Font License 1.1 (`fonts/OFL.txt`): Inter Display (the wordmark's base), Inter Medium and SemiBold (text in social images), DM Serif Text, Geist and Geist Mono (round 1 only). Geist, Geist Mono and DM Serif Text came from the website's build cache; the Geist files are static instances of the variable fonts.

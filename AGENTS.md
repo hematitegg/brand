@@ -46,6 +46,7 @@ Read this before you make, pick or change anything with the hematite logo or des
 | Avatars, small marks                     | `emblem/svg/hematite-emblem-<colourway>.svg`           |
 | Favicon                                  | `favicon/`                                             |
 | App or tool icon                         | `app-icon/hematite-app-icon-night-1024.png`            |
+| X header / social avatar                 | `social/hematite-x-header-right-1500x500.png` / `social/hematite-avatar-night-400.png` |
 | GitHub org avatar                        | `github/hematite-github-avatar-1024.png`               |
 | GitHub org README header                 | `github/hematite-github-header-dark.svg` / `-light.svg` |
 | Colours, radii, easing in code           | `brand/tokens.css`                                     |

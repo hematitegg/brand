@@ -10,6 +10,7 @@ The finished logo lives one level up. This folder keeps the exploration that led
 | `04-shard-dots/`              | Round 4: twelve new shard dots (S1–S12), grown on the 22.5° grid, a little smaller than D2. **Picked: S6.** |
 | `05-two-tone/`                | Round 5: emblem and wordmark in separate colours, on dark (T1–T8) and light (L1–L6), the i-dot following either; plus accent-dot-only versions (A1–A6). New colours tried: slate `#5F7385`, streak `#C0503F` / `#A33A2C`. **Picked: T1 and L1, dot = emblem** (now `color-dark` and `color`). |
 | `06-github/`                  | Round 6: GitHub. Avatar options (G1–G6 plain, P1–P3 as contribution squares), contribution-graph ideas, and README headers H1–H3. **Picked: P1 (green) as the avatar, H3 as the header.** |
+| `07-x/`                       | X profile: headers X1 centre, X2 right, X3 logo alone, and round avatars A1 night, A2 iron, A3 steel, mocked on an X profile. |
 | `generator/`                  | The scripts that build every board and every logo file (see its README)                           |
 
 Dropped along the way: the streak-red i-dot (the mineral's red powder; it read as an alert in the UI), the serif and mono directions, and ".gg" in the logo (domain lockups come later).
