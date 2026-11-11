@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hematite stylesheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--hm-night);color:var(--hm-zinc-400);font-family:var(--hm-font);font-size:var(--hm-body);line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:72px 32px 96px;position:relative}
+.glow{position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:900px;height:900px;background:var(--hm-glow-core);pointer-events:none}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--hm-grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--hm-grid-line) 1px,transparent 1px);background-size:var(--hm-grid-size) var(--hm-grid-size);-webkit-mask:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 70%);mask:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 70%);pointer-events:none}
+header{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 0 64px}
+header img{height:72px}
+h1{font-size:var(--hm-hero);line-height:var(--hm-hero-leading);letter-spacing:var(--hm-tracking-tight);color:var(--hm-zinc-50);font-weight:700;margin:40px 0 0}
+.shimmer{background:var(--hm-shimmer);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:var(--hm-lead);max-width:560px;margin:18px auto 0;color:var(--hm-zinc-400)}
+h2{font-size:var(--hm-section);letter-spacing:var(--hm-tracking-tight);color:var(--hm-zinc-100);font-weight:700;margin:72px 0 6px;position:relative}
+.sub{color:var(--hm-zinc-500);margin:0 0 24px}
+.row{display:grid;gap:14px}
+.c4{grid-template-columns:repeat(4,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+.card{border:1px solid var(--hm-line);background:var(--hm-surface);border-radius:var(--hm-radius-card);padding:24px;position:relative;overflow:hidden}
+.card.light{background:#fff;border-color:transparent}
+.logo{display:flex;align-items:center;justify-content:center;height:150px}
+.logo img{max-height:52px;max-width:85%}
+.cap{font-size:11.5px;color:var(--hm-zinc-500);margin-top:10px}
+.sw{height:120px;border-radius:var(--hm-radius-card);padding:16px;display:flex;flex-direction:column;justify-content:flex-end;font-size:12px}
+.sw b{font-size:15px}
+.tile{display:inline-flex;border:1px solid var(--hm-line);background:var(--hm-surface-raised);border-radius:12px;padding:10px;margin-bottom:16px}
+.card h3{color:var(--hm-zinc-100);font-size:15px;font-weight:600;margin:0 0 6px}
+.spot::before{content:"";position:absolute;inset:-1px;background:radial-gradient(400px circle at 30% 20%,rgb(196 212 224 / .1),transparent 60%)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--hm-radius-button);padding:12px 24px;font-weight:600;font-size:14px;text-decoration:none}
+.primary{background:var(--hm-zinc-100);color:var(--hm-night)}
+.primary.hover{background:#fff;box-shadow:var(--hm-glow-action)}
+.ghost{border:1px solid var(--hm-line-ghost);background:var(--hm-surface-ghost);color:var(--hm-zinc-300);font-weight:500;backdrop-filter:blur(4px)}
+.badge{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid var(--hm-line);background:var(--hm-surface-raised);padding:6px 14px;font-size:12px;font-weight:500;color:var(--hm-zinc-400)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--hm-steel);box-shadow:var(--hm-glow-dot)}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--hm-line)}th{color:var(--hm-zinc-500);font-weight:500}td:first-child{color:var(--hm-zinc-100)}
+code{font-size:12px;color:var(--hm-steel)}
+@media (max-width:800px){.c4,.c3{grid-template-columns:1fr 1fr}.c2{grid-template-columns:1fr}}
+</style></head><body>
+<div class="wrap"><div class="glow"></div><div class="grid"></div>
+<header><img src="../horizontal/svg/hematite-horizontal-steel.svg" alt="hematite">
+<h1>Share your best <span class="shimmer">moments</span>, instantly</h1>
+<p class="lead">The hematite stylesheet: logo, colour, type, surfaces, actions and motion, as the website uses them.</p></header>
+
+<h2>Logo</h2><p class="sub">Steel on dark, iron on light, one colour throughout. Files in the repo root.</p>
+<div class="row c4">
+<div class="card"><div class="logo"><img src="../horizontal/svg/hematite-horizontal-steel.svg"></div><div class="cap">horizontal · steel</div></div>
+<div class="card light"><div class="logo"><img src="../horizontal/svg/hematite-horizontal-iron.svg"></div><div class="cap">horizontal · iron</div></div>
+<div class="card"><div class="logo"><img src="../stacked/svg/hematite-stacked-steel.svg" style="max-height:110px"></div><div class="cap">stacked · steel</div></div>
+<div class="card"><div class="logo"><img src="../emblem/svg/hematite-emblem-steel.svg" style="max-height:90px"></div><div class="cap">emblem · steel</div></div>
+</div>
+
+<h2>Colour</h2><p class="sub">Most of what people see is the night, light text, and steel as light.</p>
+<div class="row c4">
+<div class="sw" style="background:var(--hm-steel);color:var(--hm-iron)"><b>Steel</b>#C4D4E0 · logo on dark · 13.1:1</div>
+<div class="sw" style="background:var(--hm-iron);color:#fff"><b>Iron</b>#2E3A46 · logo on light · 11.6:1</div>
+<div class="sw" style="background:var(--hm-haze);color:var(--hm-night)"><b>Haze</b>#8A9BAB · secondary · 7.0:1</div>
+<div class="sw" style="background:var(--hm-night);color:#fff;border:1px solid var(--hm-line)"><b>Night</b>#09090B · the ground</div>
+</div>
+<div class="row c4" style="margin-top:14px">
+<div class="sw" style="background:var(--hm-zinc-100);color:var(--hm-night);height:80px"><b>zinc-100</b>primary action</div>
+<div class="sw" style="background:var(--hm-zinc-400);color:var(--hm-night);height:80px"><b>zinc-400</b>body text</div>
+<div class="sw" style="background:var(--hm-zinc-500);color:#fff;height:80px"><b>zinc-500</b>descriptions</div>
+<div class="sw" style="background:var(--hm-surface-raised);border:1px solid var(--hm-line);color:var(--hm-zinc-300);height:80px"><b>surface</b>white 2–4% · line 6%</div>
+</div>
+
+<h2>Type</h2><p class="sub">Inter for everything. One word per headline may shimmer.</p>
+<div class="card"><table>
+<tr><th>Style</th><th>Sample</th><th>Size</th><th>Weight</th></tr>
+<tr><td>Hero</td><td style="font-size:40px;font-weight:700;letter-spacing:-.025em;line-height:1.1;color:var(--hm-zinc-50)">Your <span class="shimmer">moments</span></td><td>36 → 60 px</td><td>700</td></tr>
+<tr><td>Section</td><td style="font-size:30px;font-weight:700;letter-spacing:-.025em;color:var(--hm-zinc-100)">Built for sharing</td><td>30 → 36 px</td><td>700</td></tr>
+<tr><td>Card title</td><td style="font-size:15px;font-weight:600;color:var(--hm-zinc-100)">Custom domains</td><td>15 px</td><td>600</td></tr>
+<tr><td>Body</td><td>Capture, organize and share screenshots with anyone.</td><td>14 px</td><td>400</td></tr>
+</table></div>
+
+<h2>Surfaces and actions</h2><p class="sub">Glass on the night, light where the pointer is.</p>
+<div class="row c3">
+<div class="card spot"><div class="tile"><img src="../emblem/svg/hematite-emblem-steel.svg" style="height:20px"></div><h3>Spotlight card</h3><p style="margin:0;color:var(--hm-zinc-500)">White 2% with a 6% hairline; a steel spotlight follows the pointer.</p></div>
+<div class="card"><div class="tile"><img src="../emblem/svg/hematite-emblem-steel.svg" style="height:20px"></div><h3>Card at rest</h3><p style="margin:0;color:var(--hm-zinc-500)">16 px corners, icon tile 12 px. Under the pointer: 4% fill, 10% line.</p></div>
+<div class="card" style="display:flex;flex-direction:column;gap:16px;justify-content:center">
+<div class="btns"><span class="btn primary">Get started</span><span class="btn primary hover">Hover</span></div>
+<div class="btns"><span class="btn ghost">Join our Discord</span><span class="badge"><span class="dot"></span>100% free</span></div></div>
+</div>
+
+<h2>Motion</h2><p class="sub">From <code>src/lib/motion.ts</code>. Things come into focus: a short slide, a fade and an un-blur.</p>
+<div class="card"><table>
+<tr><th>Name</th><th>Value</th><th>For</th></tr>
+<tr><td>Ease out expo</td><td><code>cubic-bezier(0.22, 1, 0.36, 1)</code></td><td>Landing entrances, 0.5–0.7 s</td></tr>
+<tr><td>Ease out quad</td><td><code>cubic-bezier(0.25, 0.46, 0.45, 0.94)</code></td><td>Small fades</td></tr>
+<tr><td>Spring, gentle</td><td><code>280 / 26</code></td><td>Rows, empty states</td></tr>
+<tr><td>Spring, snappy</td><td><code>420 / 30</code></td><td>Hover and tap</td></tr>
+<tr><td>Spring, overlay</td><td><code>340 / 34</code></td><td>Drawers, panels</td></tr>
+<tr><td>Press</td><td><code>scale(0.97)</code></td><td>Everything you can press</td></tr>
+</table></div>
+</div></body></html>

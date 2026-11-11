@@ -1,0 +1,55 @@
+/* hematite design tokens — mirrors hematite/website as of 11 Nov 2026. See BRAND.md and DESIGN-LANGUAGE.md. */
+:root {
+  /* Brand */
+  --hm-steel: #c4d4e0;          /* logo on dark, accents, glows (website: --hematite) */
+  --hm-iron: #2e3a46;           /* logo on light */
+  --hm-haze: #8a9bab;           /* secondary, favicons, second glow */
+  --hm-night: #09090b;          /* zinc-950, the ground */
+
+  /* Neutrals (Tailwind zinc, as used by the website) */
+  --hm-zinc-50: #fafafa;
+  --hm-zinc-100: #f4f4f5;
+  --hm-zinc-300: #d4d4d8;
+  --hm-zinc-400: #a1a1aa;
+  --hm-zinc-500: #71717a;
+  --hm-zinc-600: #52525b;
+  --hm-zinc-900: #18181b;
+
+  /* Surfaces on the night */
+  --hm-surface: rgb(255 255 255 / 0.02);
+  --hm-surface-raised: rgb(255 255 255 / 0.04);
+  --hm-surface-ghost: rgb(255 255 255 / 0.03);
+  --hm-line: rgb(255 255 255 / 0.06);
+  --hm-line-ghost: rgb(255 255 255 / 0.08);
+  --hm-line-strong: rgb(255 255 255 / 0.12);
+
+  /* Light */
+  --hm-glow-core: radial-gradient(circle, rgb(196 212 224 / 0.08) 0%, transparent 70%);
+  --hm-glow-haze: radial-gradient(circle, rgb(138 155 171 / 0.06) 0%, transparent 70%);
+  --hm-glow-action: 0 0 30px rgb(196 212 224 / 0.25);
+  --hm-glow-dot: 0 0 6px rgb(196 212 224 / 0.6);
+  --hm-grid-line: rgb(196 212 224 / 0.03);
+  --hm-grid-size: 64px;
+  --hm-shimmer: linear-gradient(to right, #c4d4e0, #ffffff, #c4d4e0);
+
+  /* Radii */
+  --hm-radius: 0.625rem;        /* app base, 10px */
+  --hm-radius-button: 0.75rem;  /* rounded-xl, 12px */
+  --hm-radius-card: 1rem;       /* rounded-2xl, 16px */
+  --hm-radius-pill: 9999px;
+
+  /* Type */
+  --hm-font: "Inter", system-ui, sans-serif;
+  --hm-hero: clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem);  /* 36 → 60px */
+  --hm-hero-leading: 1.1;
+  --hm-tracking-tight: -0.025em;
+  --hm-section: clamp(1.875rem, 1.6rem + 0.9vw, 2.25rem); /* 30 → 36px */
+  --hm-body: 0.875rem;
+  --hm-lead: 1.125rem;
+
+  /* Motion */
+  --hm-ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --hm-ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --hm-press-scale: 0.97;
+  --hm-stagger: 80ms;
+}
