@@ -6,7 +6,7 @@ hematite.gg is a free screenshot uploader: capture, organise and share screensho
 
 ## The brand at a glance
 
-- **One colour per ground.** Steel `#C4D4E0` on dark, iron `#2E3A46` on light. Nothing else pretends to be the brand.
+- **Two tones per ground.** On dark, a steel `#C4D4E0` emblem with a white wordmark; on light, an iron `#2E3A46` emblem with a graphite `#18181B` wordmark. The i-dot always follows the emblem.
 - **One night.** The product lives on near-black zinc, `#09090B`, and light comes into it as a soft steel glow.
 - **One family of angles.** Everything follows the emblem's 22.5° grid: the emblem's edges, the 45° cuts in the wordmark, the shard i-dot.
 - **One typeface.** Inter for all text. Inter Display exists only inside the drawn wordmark.
@@ -38,14 +38,16 @@ The wordmark is lettering, not type. Never retype it in a font; always use the f
 
 ### Colourways
 
-| Colourway | Logo  | Use on                            |
-|-----------|-------|-----------------------------------|
-| `steel`   | Steel | Night and dark backgrounds        |
-| `iron`    | Iron  | White and light backgrounds       |
-| `black`   | Black | One colour, print                 |
-| `white`   | White | Photos, iron and coloured grounds |
+| Colourway    | Emblem + i-dot | Wordmark | Use on                                   |
+|--------------|----------------|----------|------------------------------------------|
+| `color-dark` | Steel          | White    | Night and dark backgrounds. The default  |
+| `color`      | Iron           | Graphite | White and light backgrounds              |
+| `steel`      | Steel          | Steel    | Dark, where one colour is needed         |
+| `iron`       | Iron           | Iron     | Light, where one colour is needed        |
+| `black`      | Black          | Black    | One colour, print                        |
+| `white`      | White          | White    | Photos, iron and coloured grounds        |
 
-The logo is always one colour: emblem, letters and i-dot match.
+In the two-tone colourways the i-dot ties the word back to the emblem: it always takes the emblem's colour. The emblem alone has no two-tone version; it comes in steel, iron, black and white.
 
 ## Colour
 
@@ -53,8 +55,9 @@ Most of what people see is the night, light text, and steel as light. Colour is 
 
 | Role        | Token         | Hex / value               | Use                                                     |
 |-------------|---------------|---------------------------|---------------------------------------------------------|
-| Steel       | `steel`       | `#C4D4E0`                 | The logo on dark, accents, the glows, icon tint         |
-| Iron        | `iron`        | `#2E3A46`                 | The logo on light; text on steel                        |
+| Steel       | `steel`       | `#C4D4E0`                 | The emblem on dark, one-colour logo on dark, accents, glows, icon tint |
+| Iron        | `iron`        | `#2E3A46`                 | The emblem on light; one-colour logo on light; text on steel |
+| Graphite    | `graphite`    | `#18181B` (zinc-900)      | The wordmark in the light two-tone logo (17.7:1 on white) |
 | Haze        | `haze`        | `#8A9BAB`                 | Secondary marks, favicons, the second glow              |
 | Night       | `night`       | `#09090B` (zinc-950)      | The ground of everything digital                        |
 | Surface     | `surface`     | white at 2–4%             | Cards and panels on the night                           |
@@ -87,19 +90,19 @@ In a headline, one word can carry the steel shimmer (steel → white → steel, 
 | Need                       | Use                                                              |
 |----------------------------|------------------------------------------------------------------|
 | Website favicon            | `favicon/` (snippet in the README)                               |
-| Website header and footer  | `horizontal/svg/hematite-horizontal-steel.svg`                   |
+| Website header and footer  | `horizontal/svg/hematite-horizontal-color-dark.svg`              |
 | App sidebar                | `emblem/svg/hematite-emblem-steel.svg` (32 px: use the favicon cut) |
 | Open Graph / link preview  | Not made yet; steel lockup on night, see DESIGN-LANGUAGE.md      |
 | Discord server icon        | `app-icon/hematite-app-icon-night-1024.png`                      |
 | Profile pictures           | `app-icon/hematite-app-icon-night-1024.png` on dark platforms, `…-steel-1024.png` on light ones |
-| Documents, email           | `horizontal/svg/hematite-horizontal-iron.svg`                    |
+| Documents, email           | `horizontal/svg/hematite-horizontal-color.svg`                   |
 | Print, merch               | Black or white SVG, one colour                                   |
 
 ## Don'ts
 
 - Don't retype, re-space or redraw the wordmark, and don't swap its font.
 - Don't put steel on white or light backgrounds; use iron.
-- Don't make the logo two-tone, and don't colour the i-dot on its own.
+- Don't make other two-tone pairs than `color` and `color-dark`, and don't give the i-dot its own colour.
 - Don't add, remove or deepen the cuts in the letters.
 - Don't add drop shadows, glows, outlines, bevels, gradients or 3D to the logo.
 - Don't rotate, skew or stretch the logo.

@@ -5,6 +5,9 @@ from PIL import Image
 ROOT=os.environ.get('BRAND', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..')))
 COL={'steel':'#C4D4E0','iron':'#2E3A46','black':'#000000','white':'#FFFFFF'}
 NIGHT='#09090B'; HAZE='#8A9BAB'
+# two-tone colourways (round 5: T1 and L1). The i-dot takes the emblem's colour.
+COL2={'color-dark':{'emblem':'#C4D4E0','letters':'#FFFFFF','dot':'#C4D4E0'},   # steel emblem, white letters
+      'color':     {'emblem':'#2E3A46','letters':'#18181B','dot':'#2E3A46'}}   # iron emblem, graphite letters
 PX1={'emblem':512,'wordmark':128,'horizontal':160,'stacked':400}   # 1x heights in px
 
 def layouts():
@@ -23,6 +26,22 @@ def layouts():
     out['stacked']=FN.transform(E,s2,-ex0*s2+(wx0+wx1)/2-ew2/2,-ey0*s2+770+180)+W
     return out
 
+def layout_parts():
+    """the same layouts as layouts(), split into emblem / letters / dot for two-tone colourways"""
+    letters,dot,w=FN.wordmark_parts()
+    E=FN.emblem_polys('grid'); ex0,ey0,ex1,ey1=FN.bbox(E)
+    s=820/(ey1-ey0); ew=(ex1-ex0)*s; gap=ew*0.36
+    out={'wordmark':{'letters':letters,'dot':dot}}
+    out['horizontal']={'emblem':FN.transform(E,s,-ex0*s,-ey0*s-40),'letters':FN.transform(letters,1,ew+gap,0),'dot':FN.transform(dot,1,ew+gap,0)}
+    wx0,wy0,wx1,wy1=FN.bbox(letters+dot); s2=1155/(ey1-ey0); ew2=(ex1-ex0)*s2
+    out['stacked']={'emblem':FN.transform(E,s2,-ex0*s2+(wx0+wx1)/2-ew2/2,-ey0*s2+770+180),'letters':letters,'dot':dot}
+    return out
+def svg_multi(parts, colours, h_px=None):
+    allp=[p for v in parts.values() for p in v]; x0,y0,x1,y1=FN.bbox(allp); w=x1-x0; h=y1-y0
+    size=f' width="{w*h_px/h:.1f}" height="{h_px}"' if h_px else ''
+    body=''.join(f'<path d="{FN.to_d(parts[r])}" fill="{colours[r]}"/>' for r in ('emblem','letters','dot') if r in parts)
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{x0:.1f} {-y1:.1f} {w:.1f} {h:.1f}"{size}>{body}</svg>'
+
 def svg(polys, fill, h_px=None, pad=0, bg=None):
     x0,y0,x1,y1=FN.bbox(polys); w=x1-x0+2*pad; h=y1-y0+2*pad
     size=f' width="{w*h_px/h:.1f}" height="{h_px}"' if h_px else ''
@@ -40,6 +59,14 @@ def main():
             base=f'hematite-{name}-{cw}'
             s=svg(polys,fill,PX1[name])
             open(os.path.join(mk(f'{ROOT}/{name}/svg'),base+'.svg'),'w').write(svg(polys,fill)); n+=1
+            for k in (1,2,3,4):
+                suf='' if k==1 else f'@{k}x'
+                png(s,os.path.join(mk(f'{ROOT}/{name}/png/{k}x'),base+suf+'.png'),h=PX1[name]*k); n+=1
+    for name,parts in layout_parts().items():
+        for cw,cols in COL2.items():
+            base=f'hematite-{name}-{cw}'
+            open(os.path.join(mk(f'{ROOT}/{name}/svg'),base+'.svg'),'w').write(svg_multi(parts,cols)); n+=1
+            s=svg_multi(parts,cols,PX1[name])
             for k in (1,2,3,4):
                 suf='' if k==1 else f'@{k}x'
                 png(s,os.path.join(mk(f'{ROOT}/{name}/png/{k}x'),base+suf+'.png'),h=PX1[name]*k); n+=1

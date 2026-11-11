@@ -1,8 +1,9 @@
 /* hematite design tokens — mirrors hematite/website as of 11 Nov 2026. See BRAND.md and DESIGN-LANGUAGE.md. */
 :root {
   /* Brand */
-  --hm-steel: #c4d4e0;          /* logo on dark, accents, glows (website: --hematite) */
-  --hm-iron: #2e3a46;           /* logo on light */
+  --hm-steel: #c4d4e0;          /* emblem / logo on dark, accents, glows (website: --hematite) */
+  --hm-iron: #2e3a46;           /* emblem / logo on light */
+  --hm-graphite: #18181b;       /* wordmark in the light two-tone logo (zinc-900) */
   --hm-haze: #8a9bab;           /* secondary, favicons, second glow */
   --hm-night: #09090b;          /* zinc-950, the ground */
 

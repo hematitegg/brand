@@ -6,7 +6,7 @@ What it is:
 
 - **Emblem (E2).** Two crystal shards split by a cleft. Every edge sits on a 22.5° grid; the cleft runs at 45°, then 67.5°.
 - **Wordmark.** "hematite", drawn from Inter Display SemiBold Italic, with 45° cuts on the stem tops and feet and a small shard as the i-dot.
-- **One brand colour per ground.** Steel `#C4D4E0` on dark, iron `#2E3A46` on light.
+- **Two-tone by default.** On dark: steel `#C4D4E0` emblem and i-dot, white wordmark. On light: iron `#2E3A46` emblem and i-dot, graphite `#18181B` wordmark. One-colour versions for everything else.
 
 The full guide is [brand/BRAND.md](brand/BRAND.md); notes for agents are in [AGENTS.md](AGENTS.md).
 
@@ -16,27 +16,30 @@ The full guide is [brand/BRAND.md](brand/BRAND.md); notes for agents are in [AGE
 |-------|-----------|--------------------------------------------------------|
 | Steel | `#C4D4E0` | The logo on dark backgrounds. The default              |
 | Iron  | `#2E3A46` | The logo on white and light backgrounds (11.6:1)       |
+| Graphite | `#18181B` | The wordmark in the light two-tone logo (zinc-900, 17.7:1 on white) |
 | Haze  | `#8A9BAB` | Secondary; favicons, which must read on light and dark |
 | Night | `#09090B` | The dark ground (the app's zinc-950)                   |
 
 ## Colourways
 
-| Colourway | Logo  | Use on                          |
-|-----------|-------|---------------------------------|
-| `steel`   | Steel | Night and dark backgrounds      |
-| `iron`    | Iron  | White and light backgrounds     |
-| `black`   | Black | One colour, print               |
-| `white`   | White | Photos, iron and coloured grounds |
+| Colourway    | Emblem + i-dot | Wordmark | Use on                                  |
+|--------------|----------------|----------|-----------------------------------------|
+| `color-dark` | Steel          | White    | Night and dark backgrounds. The default |
+| `color`      | Iron           | Graphite | White and light backgrounds             |
+| `steel`      | Steel          | Steel    | Dark, one colour                        |
+| `iron`       | Iron           | Iron     | Light, one colour                       |
+| `black`      | Black          | Black    | One colour, print                       |
+| `white`      | White          | White    | Photos, iron and coloured grounds       |
 
-The logo is one colour throughout: emblem, letters and i-dot always match.
+In the two-tone colourways the i-dot always takes the emblem's colour, never the wordmark's. The emblem alone comes in the four one-colour versions.
 
 ## Folders
 
 | Folder          | Contents                                                                                       |
 |-----------------|------------------------------------------------------------------------------------------------|
-| `horizontal/`   | Primary lockup, 4 colourways, SVG + PNG 1x–4x (1x = 160 px tall)                              |
-| `stacked/`      | Emblem above the wordmark, 4 colourways, SVG + PNG 1x–4x (1x = 400 px)                        |
-| `wordmark/`     | Wordmark only, 4 colourways, SVG + PNG 1x–4x (1x = 128 px)                                    |
+| `horizontal/`   | Primary lockup, 6 colourways, SVG + PNG 1x–4x (1x = 160 px tall)                              |
+| `stacked/`      | Emblem above the wordmark, 6 colourways, SVG + PNG 1x–4x (1x = 400 px)                        |
+| `wordmark/`     | Wordmark only, 6 colourways, SVG + PNG 1x–4x (1x = 128 px)                                    |
 | `emblem/`       | Emblem only, 4 colourways, SVG + PNG 1x–4x (1x = 512 px)                                      |
 | `favicon/`      | `favicon.svg`, `favicon.ico` (16/32/48), PNGs 16–128, apple-touch 180, android-chrome 192/512 |
 | `app-icon/`     | 1024 px: steel emblem on night, iron emblem on steel, square and rounded                       |

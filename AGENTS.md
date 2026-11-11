@@ -23,7 +23,7 @@ Read this before you make, pick or change anything with the hematite logo or des
 
 1. **The wordmark is a drawing.** Never set "hematite" in a font, Inter Display included. Use the SVG/PNG files.
 2. **Steel on dark, iron on light.** Steel `#C4D4E0` has only 1.5:1 contrast on white: never put it on light grounds.
-3. **One colour per logo.** Emblem, letters and i-dot always share one colour. No two-tone logo, no coloured i-dot.
+3. **Two pairs only.** The two-tone logo is `color-dark` (steel emblem, white wordmark) or `color` (iron emblem, graphite wordmark); everything else is one colour. The i-dot always takes the emblem's colour. Don't invent other pairs or a red i-dot.
 4. **The 22.5° grid.** Every new shape (patterns, icons, motion paths) takes its angles from 22.5°, 45° and 67.5°.
 5. **Cuts are fixed.** Don't add, remove or deepen cuts on the letters; they are part of the drawing (C2 light).
 6. **Small sizes use the small-size cut.** At 48 px and below, use the favicon emblem (wider cleft), not a scaled-down `emblem/` file.
@@ -35,8 +35,9 @@ Read this before you make, pick or change anything with the hematite logo or des
 
 | You need                                 | Take                                                   |
 |------------------------------------------|--------------------------------------------------------|
-| The logo on a dark UI, slide or image    | `horizontal/svg/hematite-horizontal-steel.svg`         |
-| The logo on a white page, doc, email     | `horizontal/svg/hematite-horizontal-iron.svg`          |
+| The logo on a dark UI, slide or image    | `horizontal/svg/hematite-horizontal-color-dark.svg`    |
+| The logo on a white page, doc, email     | `horizontal/svg/hematite-horizontal-color.svg`         |
+| One colour on dark / light               | `…-steel.svg` / `…-iron.svg`                           |
 | One colour, print                        | `horizontal/svg/hematite-horizontal-black.svg`         |
 | On a photo or a coloured surface         | `horizontal/svg/hematite-horizontal-white.svg`         |
 | Square or tall formats                   | `stacked/svg/hematite-stacked-<colourway>.svg`         |
@@ -50,6 +51,7 @@ Read this before you make, pick or change anything with the hematite logo or des
 
 Every logo file comes from `process/generator/` (Python, no network). Don't hand-edit exports: change the generator and run `python3 export.py` (see `process/generator/README.md`).
 
+- Two-tone colourways are `COL2` in `export.py`; the letters and the i-dot come separately from `final.wordmark_parts()`.
 - The locked logo lives in `final.py`: emblem `grid`, Inter Display SemiBold Italic, track −22, cuts `ladder_c2(45)`, i-dot `S6` at 1.22×.
 - Cuts are subtracted from the letter outlines there, so exports are plain paths with no masks. Keep it that way.
 - Rounds 1–4 have their own scripts (`make_board.py`, `round2.py` … `round4.py`); they rebuild the boards in `process/`.
