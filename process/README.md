@@ -8,6 +8,7 @@ The finished logo lives one level up. This folder keeps the exploration that led
 | `02-e2-b2-cuts-and-dots/`     | Round 2: B2 with more cuts (C1 stem tops → C4 every diagonal, C5 at 22.5°, C6 at 67.5°) and sixteen i-dots (D1–D16). **Picked: C2 (tops and feet).** |
 | `03-c2-depth-and-dots/`       | Round 3: C2 at three depths (45, 62, 80) and the sixteen dots on C2. **Picked: light (45); dot toward D2.** |
 | `04-shard-dots/`              | Round 4: twelve new shard dots (S1–S12), grown on the 22.5° grid, a little smaller than D2. **Picked: S6.** |
+| `05-two-tone/`                | Round 5: emblem and wordmark in separate colours, on dark (T1–T8) and light (L1–L6), the i-dot following either; plus accent-dot-only versions (A1–A6). New colours tried: slate `#5F7385`, streak `#C0503F` / `#A33A2C`. |
 | `generator/`                  | The scripts that build every board and every logo file (see its README)                           |
 
 Dropped along the way: the streak-red i-dot (the mineral's red powder; it read as an alert in the UI), the serif and mono directions, and ".gg" in the logo (domain lockups come later).

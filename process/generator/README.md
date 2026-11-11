@@ -16,6 +16,7 @@ python3 overview.py   # overview.html in the repo root
 |----------------|-----------------------------------------------------------------------------------------------|
 | `final.py`     | The locked logo as polygons: emblem `grid` (E2), Inter Display SemiBold Italic, track −22, cuts `ladder_c2(45)`, i-dot S6 at 1.22×. Glyph outlines are flattened and the cuts subtracted (`subtract`), so exports carry no masks. |
 | `export.py`    | Writes every logo file in steel, iron, black and white (SVG + PNG 1x–4x), the favicons (small-size cut, gap 11, up to 48 px) and the app icons. |
+| `round5.py`    | Round 5's two-tone board. Uses `final.wordmark_parts()`, which returns the letters and the i-dot separately. |
 | `overview.py`  | `overview.html`, built from the exported files.                                              |
 
 ## Shared pieces
@@ -35,6 +36,7 @@ OUT=../01-options python3 make_board.py
 OUT=../02-e2-b2-cuts-and-dots python3 round2.py
 OUT=../03-c2-depth-and-dots python3 round3.py
 OUT=../04-shard-dots python3 round4.py
+OUT=../05-two-tone python3 round5.py      # two-tone variants, from final.py's real outlines
 ```
 
 Each writes `svg/` and `board.html` into its folder. In rounds 1–4 the cuts are SVG masks; only `final.py` subtracts them for real.

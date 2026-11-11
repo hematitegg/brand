@@ -99,6 +99,19 @@ def subtract(contour, C, glyph):
     return [out]
 
 # ---- build ------------------------------------------------------------------------------------
+def wordmark_parts():
+    """(letters, dot): the wordmark's letter polygons and the i-dot polygons, separately, for two-tone use"""
+    allp,w=wordmark_polys(); nd=len(DOT)
+    G,_,_=F.layout(TEXT,FONT,TRACK)
+    # the dot is appended right after the i's contours; find it by matching the shard polygons
+    idx=None
+    for k in range(len(allp)-nd+1):
+        if all(len(allp[k+j])==len(DOT[j]) for j in range(nd)):
+            xs=[p[1] for p in allp[k]]
+            if min(xs)>500: idx=k; break
+    dot=allp[idx:idx+nd]; letters=allp[:idx]+allp[idx+nd:]
+    return letters, dot, w
+
 def wordmark_polys():
     """list of polygons (font units, y up, baseline 0) for 'hematite' with cuts and the S6 dot"""
     G,w,xh=F.layout(TEXT,FONT,TRACK); polys=[]
