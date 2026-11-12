@@ -15,16 +15,32 @@ def coverage(polys, x0, y0, x1, y1, n=5):
     return c/(n*n)
 def level(v): return 4 if v>0.75 else 3 if v>0.45 else 2 if v>0.2 else 1
 
-def avatar_svg(rows=14, cell=10, gap=2, pad=8):
-    """P1: the emblem in contribution cells. The cleft is widened (gap 17) so it survives as a row of empty cells."""
-    E=FN.emblem_polys('grid',17.0); x0,y0,x1,y1=FN.bbox(E); cs=(y1-y0)/rows
-    cols=math.ceil((x1-x0)/cs)+1; ox=(x0+x1)/2-cols*cs/2
+def sample_cells(E, rows, phase):
+    """contribution cells covering the emblem; phase shifts the sampling grid sideways by a fraction of a cell"""
+    x0,y0,x1,y1=FN.bbox(E); cs=(y1-y0)/rows
+    cols=math.ceil((x1-x0)/cs)+2; ox=(x0+x1)/2-cols*cs/2+phase*cs
     cells={}
     for r in range(rows):
         for c in range(cols):
             v=coverage(E, ox+c*cs, y1-(r+1)*cs, ox+(c+1)*cs, y1-r*cs)
             if v>0.08: cells[(r,c)]=level(v)
-    n=max(rows,cols)+4; offr=2; offc=(n-cols)//2
+    return cells
+
+def avatar_svg(rows=14, cell=10, gap=2, pad=8, margin=2):
+    """P1: the emblem in contribution cells. The cleft is widened (gap 17) so it survives as a row of empty cells.
+    Centred on the lit cells: the sampling grid is nudged sideways until the lit width has the same parity as the
+    lit height, so the empty cells split evenly on all four sides."""
+    E=FN.emblem_polys('grid',17.0)
+    best=None
+    for i in range(20):
+        ph=((i+1)//2)*0.05*(1 if i%2 else -1)          # 0, +0.05, -0.05, +0.1, ... (closest to the original first)
+        cells=sample_cells(E,rows,ph)
+        rs=[r for r,_ in cells]; cs_=[c for _,c in cells]
+        lh=max(rs)-min(rs)+1; lw=max(cs_)-min(cs_)+1
+        if (lh-lw)%2==0: best=(cells,min(rs),min(cs_),lh,lw); break
+    cells,r0,c0,lh,lw=best
+    n=max(lh,lw)+2*margin
+    offr=(n-lh)//2-r0; offc=(n-lw)//2-c0
     W=n*(cell+gap)-gap+2*pad; pal=GREEN['dark']
     s=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {W}"><rect width="{W}" height="{W}" fill="{CANVAS["dark"]}"/>']
     for r in range(n):
