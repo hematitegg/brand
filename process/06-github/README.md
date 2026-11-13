@@ -9,3 +9,5 @@
 **Picked: P1 as the org avatar and H3 as the README header**, both in GitHub's own greens. The final files are in `github/`, made by `generator/github.py`.
 
 **Fix, 12 November 2026:** the first P1 export sat one cell left of centre (the lit emblem was 11 cells wide in an 18-cell grid, and the odd remainder was rounded down). `github.py` now nudges the sampling grid until the lit width and height have the same parity and centres on the lit cells: 4 empty columns each side, 2 rows top and bottom. Before and after: `04-avatar-centring-fix.png`.
+
+**Fix, 13 November 2026:** the org README's header was blank in the GitHub mobile apps. They render the README through the REST API, which leaves relative image paths unresolved. `hematitegg/.github` now links the headers by absolute `raw.githubusercontent.com` URL, with the dark header as the `<img>` fallback. Keep it that way when the headers change: copy the new SVGs into `.github/profile/assets/` under the same names.

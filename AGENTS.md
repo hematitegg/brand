@@ -48,7 +48,7 @@ Read this before you make, pick or change anything with the hematite logo or des
 | App or tool icon                         | `app-icon/hematite-app-icon-night-1024.png`            |
 | X header / social avatar                 | `social/hematite-x-header-right-1500x500.png` / `social/hematite-avatar-night-400.png` |
 | GitHub org avatar                        | `github/hematite-github-avatar-1024.png`               |
-| GitHub org README header                 | `github/hematite-github-header-dark.svg` / `-light.svg` |
+| GitHub org README header                 | `github/hematite-github-header-dark.svg` / `-light.svg` (copied to `hematitegg/.github`, linked there by absolute raw URL) |
 | Colours, radii, easing in code           | `brand/tokens.css`                                     |
 
 ## Making or changing files
